@@ -1,0 +1,22 @@
+Spacy: 
+
+How to Install - https://spacy.io/usage/
+Useful Commands - https://spacy.io/api/cli
+
+1) Download the conllu test and dev data
+
+2) convert both of the above conllu data in to jason using spacy:
+	
+	python -m spacy convert [input_file] [output_dir]
+
+	C:\Users\SHAON\Desktop\New folder>python -m spacy convert fa_seraji-ud-dev.conllu "C:\Users\SHAON\Desktop\New folder"
+
+3) Train a model using the train set and evaluate it with the development set together:
+
+	python -m spacy train [lang] [output_dir] [train_data] [dev_data]
+	
+	C:\Users\SHAON\Desktop\New folder>python -m spacy train fa "C:\Users\SHAON\Desktop\New folder" fa_seraji-ud-train.json fa_seraji-ud-dev.json
+
+4) Evaluate the model using test data.
+
+C:\Users\SHAON\Desktop\New folder>python -m spacy evaluate model0 fa_seraji-ud-test.json -dp "C:\Users\SHAON\Desktop\New folder"
