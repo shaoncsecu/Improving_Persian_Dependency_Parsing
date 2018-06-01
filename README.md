@@ -13,7 +13,7 @@ Language Technology Project
 
 6) See if the other Parser outputted the correct one or not... If not then we will preserve this example (for re-training purpose or for using it on our future  combined parsers or whatever*)
 
-7) give me the output of UDpipe & Spacy persers  like this: 
+7) Give the output of UDpipe & Spacy persers  like this: 
 
                         label(head_word,dependent_word)
 
