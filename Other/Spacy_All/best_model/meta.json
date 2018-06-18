@@ -1,0 +1,28 @@
+{
+  "lang":"fa",
+  "name":"unnamed",
+  "pipeline":[
+    "parser"
+  ],
+  "accuracy":{
+    "uas":84.970119866,
+    "las":80.1754810183,
+    "ents_p":0.0,
+    "ents_r":0.0,
+    "ents_f":0.0,
+    "tags_acc":0.0,
+    "token_acc":100.0
+  },
+  "speed":{
+    "nwords":15832,
+    "cpu":5015.6990815904,
+    "gpu":4995.846035236
+  },
+  "vectors":{
+    "width":0,
+    "vectors":0,
+    "keys":0
+  },
+  "spacy_version":">=2.0.11",
+  "version":"0.0.0"
+}

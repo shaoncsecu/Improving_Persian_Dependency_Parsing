@@ -1,0 +1,15 @@
+UDpipe:
+
+	UAS	87.72%, 
+	LAS	84.92%
+
+Spacy:
+
+    	UAS	84.99%
+    	LAS	80.39%
+
+
+Combined LAS:
+
+	Macro	92.86%
+	Micro	

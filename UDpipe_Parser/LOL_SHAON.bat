@@ -1,0 +1,2 @@
+udpipe --parse persian-ud-2.0-170801.udpipe fa_seraji-ud-test.conllu --outfile=out.conllu
+udpipe --accuracy --parse persian-ud-2.0-170801.udpipe fa_seraji-ud-test.conllu --outfile=model_performance.txt

@@ -1,0 +1,46 @@
+Result on Validation Set:
+
+**Model 16**
+
+  "uas":85.2809066409,
+  "las":80.6233155967,
+
+Model 5:
+ 
+ "uas":84.9759906035,
+  "las":80.2224755588,
+
+Model 17
+
+  "uas":84.970119866,
+  "las":80.1754810183,
+
+Model 15
+
+  "uas":84.955263067,
+  "las":80.0221093723,
+
+
+
+Evaluation on Test Set:
+
+**Model 17**
+
+    UAS                84.99
+    LAS                80.39
+
+Model 16
+
+    UAS                84.79
+    LAS                80.27
+
+Model 15
+
+    UAS                84.75
+    LAS                80.14
+
+Model 5:
+ 
+    UAS                84.32
+    LAS                79.55
+

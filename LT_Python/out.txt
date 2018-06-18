@@ -1,0 +1,7 @@
+I like securities in london.
+nsubj(like, I)
+ROOT(like, like)
+dobj(like, securities)
+cc(securities, in)
+punct(like, london)
+punct(like, .)
