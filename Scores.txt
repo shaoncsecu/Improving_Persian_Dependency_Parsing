@@ -10,6 +10,7 @@ Spacy:
 
 
 Combined LAS:
-
-	Macro	92.86%
-	Micro	
+	
+	Micro	89.92%
+	Macro	87.59%
+		

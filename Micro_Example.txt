@@ -1,0 +1,51 @@
+#id_598: از این نظر و در فضای فعلی ایران و جهان ، طرح و تحلیل میراث علمی خیام در سال گذشته از تریبون یونسکو ، عرضه ترجمه همراه با تفسیر کارهای ریاضی او ، و تحقیق برای نشان دادن جای واقعی او در تاریخ علم ریاضی بسیار مهم بود . 
+
+Spacy: Rel =  case Head = نظر
+Spacy: Rel =  det Head = نظر
+Spacy: Rel =  nmod Head = مهم
+Spacy: Rel =  cc Head = فضای
+Spacy: Rel =  case Head = فضای
+Spacy: Rel =  conj Head = نظر
+Spacy: Rel =  amod Head = فضای
+Spacy: Rel =  nmod:poss Head = فضای
+Spacy: Rel =  cc Head = جهان
+Spacy: Rel =  conj Head = ایران
+Incorrect Taking Spacy: Rel =  punct Head = طرح
+Incorrect Taking Spacy: Rel =  conj Head = جهان
+Spacy: Rel =  cc Head = تحلیل
+Spacy: Rel =  conj Head = طرح
+Spacy: Rel =  nmod:poss Head = تحلیل
+Spacy: Rel =  amod Head = میراث
+Spacy: Rel =  nmod:poss Head = میراث
+Spacy: Rel =  case Head = سال
+Incorrect Taking Spacy: Rel =  nmod Head = مهم
+Spacy: Rel =  amod Head = سال
+Spacy: Rel =  case Head = تریبون
+Incorrect Taking Spacy: Rel =  nmod Head = سال
+Spacy: Rel =  nmod:poss Head = تریبون
+UDpipe: Rel =  punct Head = عرضه
+Incorrect Taking Spacy: Rel =  nsubj Head = مهم
+Spacy: Rel =  nmod:poss Head = عرضه
+Spacy: Rel =  case Head = تفسیر
+Spacy: Rel =  fixed Head = همراه
+Spacy: Rel =  nmod Head = ترجمه
+Spacy: Rel =  nmod:poss Head = تفسیر
+Spacy: Rel =  nmod:poss Head = کارهای
+Spacy: Rel =  nmod:poss Head = ریاضی
+Spacy: Rel =  punct Head = تحقیق
+Spacy: Rel =  cc Head = تحقیق
+Incorrect Taking Spacy: Rel =  conj Head = تفسیر
+Spacy: Rel =  case Head = دادن
+Spacy: Rel =  compound:lvc Head = دادن
+Spacy: Rel =  nmod Head = تحقیق
+Spacy: Rel =  nmod:poss Head = دادن
+Spacy: Rel =  amod Head = جای
+Spacy: Rel =  nmod:poss Head = جای
+Spacy: Rel =  case Head = تاریخ
+Incorrect Taking Spacy: Rel =  nmod Head = مهم
+Spacy: Rel =  nmod:poss Head = تاریخ
+Spacy: Rel =  nmod:poss Head = علم
+Spacy: Rel =  advmod Head = مهم
+Spacy: Rel =  ROOT Head = مهم
+Spacy: Rel =  cop Head = مهم
+Spacy: Rel =  punct Head = مهم
