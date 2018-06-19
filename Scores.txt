@@ -13,4 +13,6 @@ Combined LAS:
 	
 	Micro	89.92%
 	Macro	87.59%
+	
+	UAS	92.38%
 		
