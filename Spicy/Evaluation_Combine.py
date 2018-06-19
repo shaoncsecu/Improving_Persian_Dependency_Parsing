@@ -1,5 +1,69 @@
 import JSON_Reader
 
+def combine_UAS(heads_gold, dependencies_gold,
+                   heads_spacy, dependencies_spacy,
+                   heads_ud, dependencies_ud):
+
+    heads = []
+    dependencies = []
+
+    correct = 0
+    incorrect =0
+    total_tokens = 0
+
+    for dep_line_gold, dep_line_spacy, dep_line_ud, head_line_gold, head_line_spacy, head_line_ud in zip(
+            dependencies_gold, dependencies_spacy, dependencies_ud, heads_gold, heads_spacy, heads_ud):
+
+        head = []
+        dep_rel = []
+
+        # print("\n#id:,\n")
+
+        # here dep means dependency relations
+        for dep_g, dep_s, dep_u, head_g, head_s, head_u in zip(
+                dep_line_gold, dep_line_spacy, dep_line_ud, head_line_gold, head_line_spacy, head_line_ud):
+
+            # if head and rel_label of spacy is correct select that
+            if head_g == head_s:
+                correct += 1
+                dep_rel.append(dep_s)
+                head.append(head_s)
+                # print("Spacy: Rel = ",dep_s,"Head = "+head_s)
+
+            # else if head and rel_lable of udpipe is correct select that
+            elif head_g == head_u:
+                correct += 1
+                dep_rel.append(dep_u)
+                head.append(head_u)
+                # print("UDpipe: Rel = ",dep_u,"Head = "+head_u)
+
+            # if both of them are incorrect
+            else:
+                incorrect += 1
+                # take any one of those *we can use statistics here for main implementation of search*
+                dep_rel.append(dep_s)
+                head.append(head_s)
+                # print("Incorrect Taking Spacy: Rel = ",dep_s,"Head = "+head_s)
+
+            total_tokens += 1
+
+        heads.append(head)
+        dependencies.append(dep_rel)
+
+    print("\n\n")
+    print("Processed Tokens: ",total_tokens)
+
+    print("Correct Annotation: ",correct)
+
+    print("Incorrect Annotation: ",incorrect)
+
+    UAS = correct/total_tokens
+    print("Combined UAS = ",round(UAS,4))
+
+    return heads, dependencies
+
+
+
 def combine_micro_LAS(heads_gold, dependencies_gold,
                    heads_spacy, dependencies_spacy,
                    heads_ud, dependencies_ud):
@@ -144,3 +208,11 @@ def run_evaluation(sentences_str_gold, sentences_gold,
 
     # Creating the modified results in rel(head,dep) format - best sentences from each parser
     JSON_Reader.create_test_doc(sentences_str_gold, sentences_gold, heads_micro, dep_rel_micro, 'best_out_micro.txt')
+
+    # UAS calculations
+    heads_uas, dep_rel_uas = combine_UAS(heads_gold, dependencies_gold,
+                                            heads_spacy, dependencies_spacy,
+                                            heads_ud, dependencies_ud)
+
+    # Creating the modified results in rel(head,dep) format - best sentences from each parser
+    JSON_Reader.create_test_doc(sentences_str_gold, sentences_gold, heads_uas, dep_rel_uas, 'best_out_uas.txt')
